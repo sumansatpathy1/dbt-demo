@@ -1,5 +1,5 @@
 {% macro insert_run_results() %}
-  {% set run_results = load_result('target/run_results.json').results %}
+  {% set run_results = load_result('/app/dbt-demo/target/run_results.json').results %}
   {% if run_results %}
     {% for result in run_results %}
       INSERT INTO dbtdemo.dbt_run_results (
